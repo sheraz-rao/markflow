@@ -167,7 +167,7 @@ This is the backend API for MarkFlow, an online Markdown editor. It allows users
     * Path Parameter: `id` (integer) - The ID of the document to delete.
     * Response (Success - HTTP 204 No Content):
       ```json
-        {'message': 'Document deleted'}
+        {"message": "Document deleted"}
       ```
 
 ## Steps to Run the Project Locally
@@ -179,6 +179,8 @@ This is the backend API for MarkFlow, an online Markdown editor. It allows users
     ```
 
 2.  **Create a virtual environment:**
+    
+    I used python 3.12 and MacOS
     ```bash
     python -m venv venv
     # On Windows:
@@ -207,8 +209,4 @@ This is the backend API for MarkFlow, an online Markdown editor. It allows users
     python manage.py runserver
     ```
 
-    The API will be accessible at `http://127.0.0.1:8000/api/`.
-
-## .gitignore
-
-Create a file named `.gitignore` in the root of your project with the following content:
+    The APIs will be accessible at `http://127.0.0.1:8000/`.
