@@ -18,12 +18,14 @@ from django.contrib import admin
 from django.urls import path
 from rest_framework.routers import DefaultRouter
 
-from .views import DocumentViewSet
+from .views import DocumentViewSet, TagViewSet, LoginView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/users/<int:pk>/login/', LoginView.as_view(), name='login'),
 ]
 
 router = DefaultRouter()
 router.register(r'api/documents', DocumentViewSet, basename='document')
+router.register(r'api/tags', TagViewSet, basename='tag')
 urlpatterns += router.urls
