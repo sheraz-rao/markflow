@@ -6,7 +6,7 @@ from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.shortcuts import get_object_or_404
 
-from markflow_api.markflow_api.models import Document
+from .models import Document
 from .serializers import DocumentSerializer
 
 
